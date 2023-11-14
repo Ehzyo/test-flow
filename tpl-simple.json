@@ -1,0 +1,18 @@
+{
+  "ROSTemplateFormatVersion": "2015-09-01",
+  "Resources": {
+    "WaitConHandle": {
+      "Type": "ALIYUN::ROS::WaitConditionHandle"
+    }
+  },
+  "Outputs": {
+    "CurlCli": {
+      "Value": {
+        "Fn::GetAtt": [
+          "WaitConHandle",
+          "CurlCli"
+        ]
+      }
+    }
+  }
+}
